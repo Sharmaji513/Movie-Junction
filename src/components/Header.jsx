@@ -4,7 +4,7 @@ import { MdMovieFilter } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Header = ({ data }) => {
-  console.log(data);
+//   console.log(data);
   return (
     <div
       style={{
@@ -17,7 +17,7 @@ const Header = ({ data }) => {
         backgroundRepeat: "no-repeat",
 
       }}
-      className="w-[92vw] h-[70vh] mt-2 flex flex-col justify-end items-start ml-[-60px] p-[10%]"
+      className="w-[90vw] flex flex-col justify-end items-start ml-[-60px] p-[10%]"
     >
      
      <div>
