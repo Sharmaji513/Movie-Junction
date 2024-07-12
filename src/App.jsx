@@ -7,7 +7,7 @@ import Trending from "./components/Trending";
 
 function App() {
   return (
-    <div className="w-full  bg-[#0f0b20] h-screen flex text-white">
+    <div className="w-full  bg-[#0f0b20]  flex text-white">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />

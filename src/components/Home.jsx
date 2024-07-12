@@ -4,6 +4,7 @@ import axios from "../utils/axios";
 import Header from "./Header";
 import Dropdown from "../partials/Dropdown";
 import Horizontalcards from "../partials/Horizontalcards";
+import Topnav from "../partials/Topnav";
 
 const Home = () => {
   const [wallpaper, setwallpaper] = useState(null);
@@ -43,6 +44,7 @@ const Home = () => {
     <>
       <Sidenav />
       <div className={` h-screen overflow-auto overflow-x-hidden`}>
+       <Topnav/>
         <Header data={wallpaper} />
 
         {/* Dropdown */}
