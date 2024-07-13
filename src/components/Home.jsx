@@ -5,6 +5,7 @@ import Header from "./Header";
 import Dropdown from "../partials/Dropdown";
 import Horizontalcards from "../partials/Horizontalcards";
 import Topnav from "../partials/Topnav";
+import Loading from "../partials/Loading";
 
 const Home = () => {
   const [wallpaper, setwallpaper] = useState(null);
@@ -63,7 +64,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1>Loading..</h1>
+    <Loading/>
   );
 };
 
