@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Cards = ({ data }) => {
-  console.log("card", data);
+const Cards = ({ data , title }) => {
+  console.log(title)
+  // console.log("card", data);
   return (
     <div className=" bg-[#0f0b20] w-[100vw] flex flex-wrap justify-center mt-10">
-      {data?.map((d) => (
-        <Link className="relative w-[22vw] h-[39vw] m-2">
+      {data?.map((d, i) => (
+        <Link to={`/${d.media_type || title}/details/${d.id}`} key={i} className="relative w-[22vw] h-[39vw] m-2">
           <img
             className="w-full h-[90%] object-cover shadow-lg shadow-black"
             src={`https://image.tmdb.org/t/p/original/${
