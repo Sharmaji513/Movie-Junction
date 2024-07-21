@@ -59,7 +59,7 @@ function TvShows() {
       </div>
 
       <div>
-        <Cards data={tvShows}  />
+        <Cards data={tvShows} title="tv" />
       </div>
    
     </div>
