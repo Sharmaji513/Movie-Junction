@@ -51,7 +51,7 @@ function People() {
       </div>
 
       <div>
-        <Cards data={people}  />
+        <Cards data={people} title="People" />
       </div>
    
     </div>

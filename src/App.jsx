@@ -10,6 +10,7 @@ import People from "./components/People";
 import Moviedetails from "./partials/Moviedetails";
 import Tvdetails from "./partials/Tvdetails";
 import NotFound from "./components/NotFound";
+import PersonDetails from "./partials/PersonDetails";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
 
         <Route path="/people" element={<People/>} />
+        <Route path="/people/details/:id" element={<PersonDetails/>}></Route>
 
         <Route path="/loading" element={<Loading/>} />
         <Route path="*" element={<NotFound/>} />
