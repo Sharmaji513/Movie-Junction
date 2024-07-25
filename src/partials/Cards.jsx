@@ -11,9 +11,9 @@ const Cards = ({ data , title }) => {
         
           <img
             className="w-full h-[90%] object-cover shadow-lg shadow-black"
-            src={`https://image.tmdb.org/t/p/original/${
-              d?.backdrop_path || d?.poster_path || d?.profile_path
-            }`}
+            src={ 
+                d.backdrop_path || d.poster_path || d.file_path ||d?.profile_path ? `https://image.tmdb.org/t/p/original/${d.backdrop_path || d.poster_path || d.file_path ||d?.profile_path}`:"https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg"
+              }
             alt=""
           />
           <h1 className="text-xl  text-zinc-400 font-semibold p-2 mb-10 text-center">{d.titel || d.original_name || d.original_title}</h1>

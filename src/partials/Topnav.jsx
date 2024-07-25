@@ -5,6 +5,7 @@ import { MdOutlineScreenSearchDesktop } from 'react-icons/md'
 import { RxCross2 } from 'react-icons/rx'
 import { Link } from 'react-router-dom'
 
+
 const topnav = () => {
 
     const [query , setquery] = useState("")
@@ -55,9 +56,14 @@ const topnav = () => {
             {/* Search logic */}
             <div className='absolute w-[34rem] text-white h-[50vh] top-[90%] z-10 mt-5 overflow-auto'>
 
+                
               {searchMovie.map((d,i) => (
-                 <Link key={i} className=' rounded  p-10  bg-[#0f0b20] gap-5  hover:bg-[#6556cd] duration-300 font-semibold w-full flex justify-start items-center border-b-2  border-zinc-500'>
-                        <img className=' z-10 w-[10vw] h-[7vw] bg-cover ' src={`https://image.tmdb.org/t/p/original/${d.backdrop_path ||d.poster_path ||d.profile_path}`} alt="" />
+                 <Link  key={i} className=' rounded  p-10  bg-[#0f0b20] gap-5  hover:bg-[#6556cd] duration-300 font-semibold w-full flex justify-start items-center border-b-2  border-zinc-500'>
+                        <img className=' z-10 w-[10vw] h-[7vw] bg-cover '
+                         src={ 
+                          d.backdrop_path || d.poster_path || d.file_path ? `https://image.tmdb.org/t/p/original/${d.backdrop_path || d.poster_path || d.file_path}`:"https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg"
+                        } 
+                        alt="" />
                         <span>{d.title} </span>
                         </Link> 
               ))}  

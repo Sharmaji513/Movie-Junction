@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Horizontalcards = ({ data = [], title }) => {
   return (
     <>
@@ -8,12 +9,10 @@ const Horizontalcards = ({ data = [], title }) => {
         {data.map((d, i) => (
           <div key={i} className="min-w-[25%] w-[20vw] h-[45vh]  mr-3  ">
             <Link to={`/${d.media_type || title}/details/${d.id}`}>
-            <img
-              className="w-full h-[70%] object-cover  cursor-pointer"
-              src={`https://image.tmdb.org/t/p/original/${
-                d.backdrop_path || d.poster_path || d.file_path
-                
-              }`}
+            <img className="w-full h-[70%] object-cover  cursor-pointer"
+              src={ 
+                d.backdrop_path || d.poster_path || d.file_path ? `https://image.tmdb.org/t/p/original/${d.backdrop_path || d.poster_path || d.file_path}`:"https://img.freepik.com/premium-vector/no-photo-available-vector-icon-default-image-symbol-picture-coming-soon-web-site-mobile-app_87543-18055.jpg"
+              }
              
             />
             </Link>
