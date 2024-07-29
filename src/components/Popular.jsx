@@ -22,7 +22,7 @@ const Popular = () => {
   const GetPopular = async () => {
     try {
      
-      const { data } = await axios.get(`${category}/popular?language=en-US&page=1`);
+      const { data } = await axios.get(`${category}/popular`);
       setPopular(data.results);
       console.log(data);
     } catch (error) {
@@ -42,7 +42,7 @@ const Popular = () => {
           onClick={() => navigate(-1)}
           className="text-2xl flex  gap-5 items-center text-zinc-500 p-4 hover:text-blue-600"
         >
-          <FaLongArrowAltLeft /> Popular{" "}
+          <FaLongArrowAltLeft /> Popular
         </h1>
         <Topnav />
         <Dropdown
@@ -53,7 +53,7 @@ const Popular = () => {
       </div>
 
       <div>
-        <Cards data={popular} title={`trending`} />
+        <Cards data={popular} title={category} />
       </div>
     </div>
   ) : (
