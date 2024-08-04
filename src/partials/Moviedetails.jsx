@@ -132,10 +132,13 @@ const Moviedetails = () => {
             <h1 className="text-2xl mb-3  mt-5">Languages</h1>
             <p className="mb-10">{info.translations.join(", ")}</p>
 
-            <Link className="p-5 bg-[#6556CD] rounded-lg">
-              <i className="text-xl ri-play-fill mr-3 "></i>
-              Play Trailer
-            </Link>
+            <Link
+                        className="p-5 bg-[#6556CD] rounded-lg"
+                        to={`${pathname}/trailer`}
+                    >
+                        <i className="text-xl ri-play-fill mr-3 "></i>
+                        Play Trailer
+                    </Link>
           </div>
         </div>
       </div>

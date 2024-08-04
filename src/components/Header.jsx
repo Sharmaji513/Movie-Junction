@@ -40,7 +40,7 @@ const Header = ({ data }) => {
         
      </div>
         
-     <Link to={`/${data.media_type || title}/datails/${data.id}/trailer`} className="bg-[#6556cd] px-7 py-3 rounded-md mt-5">Watch Trailer</Link>
+     <Link to={`/${data.media_type || title}/details/${data.id}/trailer`} className="bg-[#6556cd] px-7 py-3 rounded-md mt-5">Watch Trailer</Link>
     </div>
   );
 };
